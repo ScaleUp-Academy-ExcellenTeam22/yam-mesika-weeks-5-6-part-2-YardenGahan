@@ -10,14 +10,12 @@ import time
 def create_list():
     # returns a list from all the words in the file 'words.txt'
     file = open('words.txt', 'r')
-    words_list = list(file.read().split())
-    return words_list
+    return list(file.read().split())
 
 
 def create_set():
     # returns a set from all the words in the gile 'words.txt'
-    words_set = set(create_list())
-    return words_set
+    return set(create_list())
 
 
 def average_runtime():
