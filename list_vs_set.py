@@ -14,11 +14,13 @@ def create_list():
 
 
 def create_set():
-    # returns a set from all the words in the gile 'words.txt'
+    # returns a set from all the words in the file 'words.txt'
     return set(create_list())
 
 
 def average_runtime():
+    # prints the average time took to conduct a search 1000 times in list vs in a set.
+
     words_list = create_list()
     words_set = create_set()
 
@@ -26,19 +28,15 @@ def average_runtime():
     for x in range(1000):
         if 'zwitterion' in words_list:
             pass
-        else:
-            pass
     end_time = time.time()
-    print(f'running search in words_list took {end_time - start_time} ')
+    print(f'running search in words_list took {(end_time - start_time) / 1000} ')
 
     start_time = time.time()
-    for x in range(1000):
+    for y in range(1000):
         if 'zwitterion' in words_set:
             pass
-        else:
-            pass
     end_time = time.time()
-    print(f'running search in words_list took {end_time - start_time} ')
+    print(f'running search in words_list took {(end_time - start_time) / 1000} ')
 
 
 average_runtime()
